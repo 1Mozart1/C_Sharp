@@ -1,0 +1,15 @@
+D:\Education\C_Sharp\Example\bin\Debug\net6.0\Example.exe
+D:\Education\C_Sharp\Example\bin\Debug\net6.0\Example.deps.json
+D:\Education\C_Sharp\Example\bin\Debug\net6.0\Example.runtimeconfig.json
+D:\Education\C_Sharp\Example\bin\Debug\net6.0\Example.dll
+D:\Education\C_Sharp\Example\bin\Debug\net6.0\Example.pdb
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.csproj.AssemblyReference.cache
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.GeneratedMSBuildEditorConfig.editorconfig
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.AssemblyInfoInputs.cache
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.AssemblyInfo.cs
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.csproj.CoreCompileInputs.cache
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.dll
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\refint\Example.dll
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.pdb
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\Example.genruntimeconfig.cache
+D:\Education\C_Sharp\Example\obj\Debug\net6.0\ref\Example.dll
