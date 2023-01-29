@@ -6,7 +6,7 @@
 // System.Console.WriteLine("Квадрат числа равен: " + res + " Text");
 // System.Console.WriteLine($"Квадрат числа равен: {res} Text");
 
-// Задача: является ли число a, квадратом числа b ///////////////////////////////////////////////////// 
+//////////////////////////////// Задача: является ли число a, квадратом числа b ///////////////////////////////////////////////////// 
 
 // System.Console.Write("Введите число а: ");
 // int num_A = Convert.ToInt32(Console.ReadLine());
@@ -60,35 +60,44 @@
 // System.Console.WriteLine("Такого дня нет");
 // }
 
-// Можно сделать через SWITCH CASE
+// Можно сделать через SWITCH CASE*************************************************************
 
-System.Console.Write("Введите день недели: ");
-int day = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Введите день недели: ");
+// int day = Convert.ToInt32(Console.ReadLine());
 
-switch (day)
+// switch (day)
+// {
+//     case 1:
+//         System.Console.WriteLine("Понедельник");
+//         break;
+//     case 2:
+//         System.Console.WriteLine("Вторник");
+//         break;
+//     case 3:
+//         System.Console.WriteLine("Среда");
+//         break;
+//     case 4:
+//         System.Console.WriteLine("Четверг");
+//         break;
+//     case 5:
+//         System.Console.WriteLine("Пятница");
+//         break;
+//     case 6:
+//         System.Console.WriteLine("Суббота");
+//         break;
+//     case 7:
+//         System.Console.WriteLine("Воскресенье");
+//         break;
+//     default:
+//         System.Console.WriteLine("Такого дня не существует");
+//         break;
+// }
+
+////////////////////////////////////////////////Задача на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.//////////////
+
+System.Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+for (int i = -num; i <= num; i++)
 {
-    case 1:
-        System.Console.WriteLine("Понедельник");
-        break;
-    case 2:
-        System.Console.WriteLine("Вторник");
-        break;
-    case 3:
-        System.Console.WriteLine("Среда");
-        break;
-    case 4:
-        System.Console.WriteLine("Четверг");
-        break;
-    case 5:
-        System.Console.WriteLine("Пятница");
-        break;
-    case 6:
-        System.Console.WriteLine("Суббота");
-        break;
-    case 7:
-        System.Console.WriteLine("Воскресенье");
-        break;
-    default:
-        System.Console.WriteLine("Такого дня не существует");
-        break;
+    System.Console.Write(i + " ");
 }
