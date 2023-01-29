@@ -47,10 +47,10 @@
 
 //////////////////////////////////// Задача "все четный числа до введеного числа"///////////////////////////
 
-System.Console.Write("Введите число : ");
-int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Введите число : ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i <= num; i+=2)
-{
-    System.Console.Write(i + " ");
-}
+// for (int i = 0; i <= num; i += 2)
+// {
+//     System.Console.Write(i + " ");
+// }
