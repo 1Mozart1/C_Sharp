@@ -143,3 +143,10 @@
 //     System.Console.WriteLine($"Числа равны");
 // }
 
+/////////Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.*********************
+
+Random rand = new Random();
+int num = rand.Next(100, 1000);
+System.Console.WriteLine($"Случайное число: {num}");
+
+System.Console.WriteLine($"{num / 100}{num % 10}");
