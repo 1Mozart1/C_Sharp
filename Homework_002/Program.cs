@@ -12,18 +12,54 @@
 
 /////  ЗАДАЧА № 2 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. 
 
-System.Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-while (num > 999 || num < -999)
-{
-    num = num / 10;
-}
-if (num > 99 & num < 1000 || num < -99)
-{
-    System.Console.WriteLine($"Третье число : {num % 10}");
-}
-else
-{
-    System.Console.WriteLine($"Нет третьего цифры");
-}
+// while (num > 999 || num < -999)
+// {
+//     num = num / 10;
+// }
+// if (num > 99 & num < 1000 || num < -99)
+// {
+//     System.Console.WriteLine($"Третье число : {num % 10}");
+// }
+// else
+// {
+//     System.Console.WriteLine($"Нет третьего цифры");
+// }
+
+/////  ЗАДАЧА № 3 Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
+/////             и проверяет, является ли этот день выходным.
+
+// System.Console.Write("Введите день недели: ");
+// int day = Convert.ToInt32(Console.ReadLine());
+
+// switch (day)
+// {
+//     case 1:
+//         System.Console.WriteLine("Понедельник");
+//         break;
+//     case 2:
+//         System.Console.WriteLine("Вторник");
+//         break;
+//     case 3:
+//         System.Console.WriteLine("Среда");
+//         break;
+//     case 4:
+//         System.Console.WriteLine("Четверг");
+//         break;
+//     case 5:
+//         System.Console.WriteLine("Пятница");
+//         break;
+//     case 6:
+//         System.Console.Write("Суббота - ");
+//         System.Console.WriteLine("является выходным днём");
+//         break;
+//     case 7:
+//         System.Console.Write("Воскресенье - ");
+//         System.Console.WriteLine("является выходным днём");
+//         break;
+//     default:
+//         System.Console.WriteLine("Такого дня не существует");
+//         break;
+// }
