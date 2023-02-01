@@ -31,35 +31,41 @@
 /////  ЗАДАЧА № 3 Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
 /////             и проверяет, является ли этот день выходным.
 
-// System.Console.Write("Введите день недели: ");
-// int day = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Введите день недели: ");
+int day = Convert.ToInt32(Console.ReadLine());
 
-// switch (day)
-// {
-//     case 1:
-//         System.Console.WriteLine("Понедельник");
-//         break;
-//     case 2:
-//         System.Console.WriteLine("Вторник");
-//         break;
-//     case 3:
-//         System.Console.WriteLine("Среда");
-//         break;
-//     case 4:
-//         System.Console.WriteLine("Четверг");
-//         break;
-//     case 5:
-//         System.Console.WriteLine("Пятница");
-//         break;
-//     case 6:
-//         System.Console.Write("Суббота - ");
-//         System.Console.WriteLine("является выходным днём");
-//         break;
-//     case 7:
-//         System.Console.Write("Воскресенье - ");
-//         System.Console.WriteLine("является выходным днём");
-//         break;
-//     default:
-//         System.Console.WriteLine("Такого дня не существует");
-//         break;
-// }
+switch (day)
+{
+    case 1:
+        System.Console.Write("Понедельник - ");
+        System.Console.WriteLine("будний день");
+        break;
+    case 2:
+        System.Console.Write("Вторник - ");
+        System.Console.WriteLine("будний день");
+        break;
+    case 3:
+        System.Console.Write("Среда - ");
+        System.Console.WriteLine("будний день");
+        break;
+    case 4:
+        System.Console.Write("Четверг - ");
+        System.Console.WriteLine("будний день");
+        break;
+    case 5:
+        System.Console.Write("Пятница - ");
+        System.Console.WriteLine("будний день");
+        break;
+    case 6:
+        System.Console.Write("Суббота - ");
+        System.Console.WriteLine("выходной день");
+        break;
+    case 7:
+        System.Console.Write("Воскресенье - ");
+        System.Console.WriteLine("выходной день");
+        break;
+    default:
+        System.Console.WriteLine("Такого дня не существует");
+        break;
+}
+
