@@ -203,3 +203,78 @@
 // {
 //     System.Console.WriteLine($"Числа не являются друг другу квадратами");
 // }
+
+
+///// Задача №17. Напишите программу, которая принимает на вход координаты точки (X и Y), ************************************
+///// причем X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.**********************************
+
+// int input_num(string str)                         // функция ввода числа, принимает строку, а возвращает число
+// {
+//     System.Console.Write(str);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// void FindQuarter(int a, int b)                  // Функция нахождения 
+// {
+//     if (a > 0 && b > 0)
+//     {
+//         System.Console.WriteLine("Номер четверти 1");
+//     }
+//     else if (a < 0 && b > 0)
+//     {
+//         System.Console.WriteLine("Номер четверти 2");
+//     }
+//     else if (a < 0 && b < 0)
+//     {
+//         System.Console.WriteLine("Номер четверти 3");
+//     }
+//     else if (a > 0 && b < 0)
+//     {
+//         System.Console.WriteLine("Номер четверти 4");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Точка находится в начале координат");
+//     }
+// }
+
+// int x = input_num("Введите координату x: ");
+// int y = input_num("Введите координату y: ");
+
+// FindQuarter (x , y);
+
+
+// Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
+
+// System.Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// string [] arr = {"x>0, y>0", "x<0, y>0", "x<0, y<0", "x>0, y<0", "Нет такой четверти"};
+
+// if (a == 1)
+// {
+//     System.Console.WriteLine(arr[0]);
+// }
+// else if (a == 2)
+// {
+//     System.Console.WriteLine(arr[1]);
+// }
+// else if (a==3)
+// {
+//     System.Console.WriteLine(arr[2]);
+// }
+// else if (a==4)
+// {
+//     System.Console.WriteLine(arr[3]);
+// }
+// else
+// {
+//     System.Console.WriteLine(arr[4]);
+// }
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+
+//Math.Pow(x, y); // функция возведения в степень (x - число, y - степень)
+//Math.Sqrt // Функция поиска корня числа
+
+
