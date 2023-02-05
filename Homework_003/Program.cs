@@ -39,10 +39,8 @@
 // int z2 = input_num("Введите координату z2: ");
 
 // double distance = (Math.Round(Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2)), 3));
-// System.Console.WriteLine($"Расстояние между точками " + distance);
+// System.Console.WriteLine($"Расстояние между точками  {distance}");
 
-// A (3,6,8); B (2,1,-7), -> 15.84
-// A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
 
