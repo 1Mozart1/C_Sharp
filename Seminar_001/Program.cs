@@ -294,3 +294,20 @@
 // // Math.Round (a, 3) - округление 1-е это чило, 2-е до скольки знаков
 
 // System.Console.WriteLine(Math.Round(Math.Pow(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2), 0.5), 3));
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
+
+System.Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+// int count = 1;
+// while (count<=a)
+// {
+//     System.Console.Write(Math.Pow(count, 2) + ", ");
+//     count ++;
+// }
+for (int count = 1; count <= a; count++)
+{
+    System.Console.Write(Math.Pow(count, 2) + ", ");
+}
