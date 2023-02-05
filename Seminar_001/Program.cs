@@ -298,16 +298,16 @@
 
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
 
-System.Console.Write("Введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
 
-// int count = 1;
-// while (count<=a)
+// // int count = 1;
+// // while (count<=a)
+// // {
+// //     System.Console.Write(Math.Pow(count, 2) + ", ");
+// //     count ++;
+// // }
+// for (int count = 1; count <= a; count++)
 // {
 //     System.Console.Write(Math.Pow(count, 2) + ", ");
-//     count ++;
 // }
-for (int count = 1; count <= a; count++)
-{
-    System.Console.Write(Math.Pow(count, 2) + ", ");
-}
