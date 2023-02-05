@@ -277,4 +277,20 @@
 //Math.Pow(x, y); // функция возведения в степень (x - число, y - степень)
 //Math.Sqrt // Функция поиска корня числа
 
+// int input_num(string str)
+// {
+//     System.Console.Write(str);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
+// int x1 = input_num("Введите координату x1: ");
+// int y1 = input_num("Введите координату y1: ");
+// int x2 = input_num("Введите координату x2: ");
+// int y2 = input_num("Введите координату y2: ");
+
+// System.Console.WriteLine(Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)));
+
+// // ИЛИ
+// // Math.Round (a, 3) - округление 1-е это чило, 2-е до скольки знаков
+
+// System.Console.WriteLine(Math.Round(Math.Pow(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2), 0.5), 3));
