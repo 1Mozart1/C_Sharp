@@ -313,3 +313,159 @@
 // }
 
 
+// Lesson # 4  ******************************************************************************************************************
+
+// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+// System.Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// if(a/10000 == a%10 && a/1000 %10 == a%10000/1000)
+// {
+//     System.Console.WriteLine("Число является палиндромом");
+// }
+// else
+// {
+//     System.Console.WriteLine("Число не является палиндромом");
+// }
+
+
+//    int? a = Console.ReadLine() - знак ? ставится для того чтобы в ячейку записывалось значение NULL ???????????????????????
+//    if(a!.Lenght == 5) - знак  !  ставится для методов !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А. 
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+// int GetNumber(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int GetSumElements(int A)
+// {
+//     int result = 0;
+
+//     for (int i = 1; i <= A; i++)
+//     {
+//         result += i;
+//     }
+//     return result;
+// }
+
+// int num = GetNumber("Введите число A: ");
+
+// System.Console.WriteLine($"Сумма чисел от 1 до {num} = {GetSumElements(num)}");
+
+
+// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.*********************
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+
+// string? GetNumber(string text)
+// {
+//     System.Console.Write(text);
+//     return Console.ReadLine();
+// }
+// string? num = GetNumber("Введите число A: ");
+// int result = num!.Length;
+// System.Console.WriteLine(result);
+
+
+
+//Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+//           4 -> 24 
+//           5 -> 120
+
+// int GetNumber(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+// int Multiply(int a)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= a; i++)
+//     {
+//         result = result * i;
+//     }
+//     return result;
+// }
+// int num = GetNumber("Введите число N: ");
+// System.Console.WriteLine($"Произведение чисел от 1 до {num} = {Multiply(num)}");
+
+
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+//            [1,0,1,1,0,1,0,0]
+
+
+// void PrintArray(int[] array)
+// {
+//     int count = array.Length;
+//     for (int i = 0; i < count; i++)
+//     {
+//         System.Console.Write($"{array[i]} ");
+//     }
+// }
+// int[] FillArray(int size)
+// {
+//     int[] arr = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arr[i] = new Random().Next(0, 2);
+//     }
+//     return arr;
+// }
+
+// int[] myArray = FillArray(16);
+// PrintArray(myArray);
+
+
+//-------------Версия № 2
+
+// int[] GetArray()
+// {
+// var arr = new int[8];
+// var rand = new Random();
+// for (int i = 0; i < arr.Length; i++)
+// {
+// arr[i] = rand.Next(0, 2);
+// }
+// return arr;
+// }
+
+// void PrintArray(int[] arr)
+// {
+// System.Console.WriteLine("["+string.Join(", ", arr)+"]");   // заполнение массива в одну строку вместо
+// }
+
+// var myArray = GetArray();
+// PrintArray(myArray);
+
+
+//--------------- Версия 3
+
+// void GetArray(int[] arr)
+// {
+//     var rand = new Random();
+//     for (int i = 0; i < arr.Length; i++)                           
+//     {
+//         arr[i] = rand.Next(0, 2);
+//     }
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", arr) + "]");  
+// }
+
+// int[] myArray = new int[8];
+// GetArray(myArray);
+// PrintArray(myArray);
