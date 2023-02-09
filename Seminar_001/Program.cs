@@ -430,24 +430,24 @@
 
 //-------------Версия № 2
 
-// int[] GetArray()
-// {
-// var arr = new int[8];
-// var rand = new Random();
-// for (int i = 0; i < arr.Length; i++)
-// {
-// arr[i] = rand.Next(0, 2);
-// }
-// return arr;
-// }
+int[] GetArray()
+{
+var arr = new int[10];
+var rand = new Random();
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = rand.Next(0, 2);
+}
+return arr;
+}
 
-// void PrintArray(int[] arr)
-// {
-// System.Console.WriteLine("["+string.Join(", ", arr)+"]");   // заполнение массива в одну строку вместо
-// }
+void PrintArray(int[] arr)
+{
+System.Console.WriteLine("["+string.Join(", ", arr)+"]");   // заполнение массива в одну строку вместо
+}
 
-// var myArray = GetArray();
-// PrintArray(myArray);
+var myArray = GetArray();
+PrintArray(myArray);
 
 
 //--------------- Версия 3
