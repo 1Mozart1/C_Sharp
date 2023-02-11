@@ -430,24 +430,24 @@
 
 //-------------Версия № 2
 
-int[] GetArray()
-{
-var arr = new int[10];
-var rand = new Random();
-for (int i = 0; i < arr.Length; i++)
-{
-arr[i] = rand.Next(0, 2);
-}
-return arr;
-}
+// int[] GetArray()
+// {
+// var arr = new int[10];
+// var rand = new Random();
+// for (int i = 0; i < arr.Length; i++)
+// {
+// arr[i] = rand.Next(0, 2);
+// }
+// return arr;
+// }
 
-void PrintArray(int[] arr)
-{
-System.Console.WriteLine("["+string.Join(", ", arr)+"]");   // заполнение массива в одну строку вместо
-}
+// void PrintArray(int[] arr)
+// {
+// System.Console.WriteLine("["+string.Join(", ", arr)+"]");   // заполнение массива в одну строку вместо
+// }
 
-var myArray = GetArray();
-PrintArray(myArray);
+// var myArray = GetArray();
+// PrintArray(myArray);
 
 
 //--------------- Версия 3
@@ -468,4 +468,179 @@ PrintArray(myArray);
 
 // int[] myArray = new int[8];
 // GetArray(myArray);
+// PrintArray(myArray);
+
+
+
+// Lesson # 5  ******************************************************************************************************************
+
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. 
+// Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];                           //
+//     var rand = new Random();                                //
+//     for (int i = 0; i < array.Length; i++)                     //  создание рандомно заполняемого массива
+//     {                                                       //  по заданным условиям 
+//         array[i] = rand.Next(leftrange, rightrange + 1);    //
+//     }                                                       //            
+//     return array;                                           //
+// }
+
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]"); // string.Join - позволяет выводить массив через заданный разделитель 
+// }
+
+// int SumNegative(int[] array)
+// {
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < 0)
+//         {
+//             result += array[i];
+//         }
+//     }
+//     return result;
+// }
+
+// int SumPositive(int[] array)
+// {
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > 0)
+//         {
+//             result += array[i];
+//         }
+//     }
+//     return result;
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// PrintArray(myArray);
+// System.Console.WriteLine($"Сумма отрицательных чисел равна: {SumNegative(myArray)}");
+// System.Console.WriteLine($"Сумма положительных чисел равна: {SumPositive(myArray)}");
+
+// *****  ИЛИ  *******
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];                           //
+//     var rand = new Random();                                //
+//     for (int i = 0; i < array.Length; i++)                     //  создание рандомно заполняемого массива
+//     {                                                       //  по заданным условиям 
+//         array[i] = rand.Next(leftrange, rightrange + 1);    //
+//     }                                                       //            
+//     return array;                                           //
+// }
+
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]"); // string.Join - позволяет выводить массив через заданный разделитель 
+// }
+
+// int[] SumPositiveAndNegative(int[] array)
+// {
+//     int[] result = new int[2];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < 0)
+//         {
+//             result[0] += array[i];
+//         }
+//         else
+//         {
+//             result[1] += array[i];
+//         }
+//     }
+//     return result;
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// PrintArray(myArray);
+// int[] sums = SumPositiveAndNegative(myArray);
+// System.Console.WriteLine($"Сумма отрицательных чисел равна: {sums[0]}");
+// System.Console.WriteLine($"Сумма положительных чисел равна: {sums[1]}");
+
+// *****  ИЛИ  *******
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];                           //
+//     var rand = new Random();                                //
+//     for (int i = 0; i < array.Length; i++)                     //  создание рандомно заполняемого массива
+//     {                                                       //  по заданным условиям 
+//         array[i] = rand.Next(leftrange, rightrange + 1);    //
+//     }                                                       //            
+//     return array;                                           //
+// }
+
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]"); // string.Join - позволяет выводить массив через заданный разделитель 
+// }
+
+// void SumPositiveAndNegative(int[] array, out int sumPositive, out int sumNegative)
+// {
+//     sumNegative = 0;
+//     sumPositive = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < 0)
+//         {
+//             sumNegative += array[i];
+//         }
+//         else
+//         {
+//             sumPositive += array[i];
+//         }
+//     }
+    
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// PrintArray(myArray);
+// SumPositiveAndNegative(myArray, out int sumPositive, out int sumNegative);
+// System.Console.WriteLine($"Сумма отрицательных чисел равна: {sumNegative}");
+// System.Console.WriteLine($"Сумма положительных чисел равна: {sumPositive}");
+
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, 
+//            и наоборот. [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];                          
+//     var rand = new Random();                                
+//     for (int i = 0; i < array.Length; i++)                   
+//     {                                                        
+//         array[i] = rand.Next(leftrange, rightrange + 1);    
+//     }                                                                
+//     return array;                                           
+// }
+
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");  
+// }
+
+// void changeArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)                   
+//     {                                                        
+//         array[i] = -array[i];    
+//     }                                                                                                       
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// PrintArray(myArray);
+// changeArray(myArray);
 // PrintArray(myArray);
