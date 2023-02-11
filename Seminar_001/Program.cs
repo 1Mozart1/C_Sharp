@@ -602,7 +602,7 @@
 //             sumPositive += array[i];
 //         }
 //     }
-    
+
 // }
 
 // int[] myArray = GenerateArray(6, -9, 9);
@@ -644,3 +644,175 @@
 // PrintArray(myArray);
 // changeArray(myArray);
 // PrintArray(myArray);
+
+
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// bool FindNumber(int[] array, int number)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == number)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// int number = 7;
+// PrintArray(myArray);
+// if(FindNumber(myArray, number))
+// {
+//     System.Console.WriteLine($"Есть такое число");
+// }
+// else
+// {
+//     System.Console.WriteLine($"Такого числа нет");
+// }
+
+//*********** ИЛИ  **************
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// void FindNumber(int[] array, int number)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] == number)
+//         {
+//             System.Console.WriteLine("Есть такое число");
+//             return;
+//         }
+//     }
+//     System.Console.WriteLine("Нет такого элемента");
+
+// }
+
+// int[] myArray = GenerateArray(6, -9, 9);
+// int number = 7;
+// PrintArray(myArray);
+// FindNumber(myArray, number);
+
+
+
+// *************************************************************  функция поиска по индексу  *****************************
+
+// int[] arr = { 0, 1, 2, 3, 4, 5, 6, };
+// System.Console.WriteLine(Array.IndexOf(arr, 5)); // показывает индекс искомого элемента, если показывает "-1" то такого элемента нет
+
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. ****************************************************************
+//            Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// int GetResult(int[] array)
+// {
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] >= 10 && array[i] <= 99)
+//         {
+//             result++;
+//         }
+//     }
+//     return result;
+// }
+
+
+// int[] myArray = GenerateArray(30, -100, 100);
+// PrintArray(myArray);
+// System.Console.WriteLine(GetResult(myArray));
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+//            Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// int[] GetResult(int[] array)
+// {
+//     int size;
+//     if (array.Length == 0)
+//         size = array.Length / 2;
+//     else
+//         size = array.Length / 2 + 1;
+
+//     int[] arrResult = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arrResult[i] = array[i] * array[array.Length - 1 - i];
+//     }
+//     if (array.Length % 2 != 0) // != - означает не равняется
+//     {
+//         arrResult[arrResult.Length - 1]= array[size - 1];
+//     }
+//     return arrResult;
+// }
+
+// int[] myArray = GenerateArray(5, 1, 10);
+// PrintArray(myArray);
+// int[] res = GetResult(myArray);
+// PrintArray(res);
