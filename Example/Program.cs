@@ -19,7 +19,7 @@
 // Console.WriteLine(res);
 
 // int numA = new Random().Next(-100,100);
-// Console.WriteLine(numA); // что бы видеть рандомные числа
+// Console.WriteLine(numA);                // что бы видеть рандомные числа
 // int numB = new Random().Next(-100,100);
 // Console.WriteLine(numB);
 // int res = numA * numB;
