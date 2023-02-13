@@ -73,10 +73,10 @@
 double[] GenerateArray(int size, int leftrange, int rightrange)
 {
     double[] array = new double[size];
-    var rand = new Random();
+    var rand =  new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(leftrange, rightrange + 1);
+        array[i] = Math.Round(rand.Next(leftrange, rightrange + 1) + rand.NextDouble(), 2);
     }
     return array;
 }
