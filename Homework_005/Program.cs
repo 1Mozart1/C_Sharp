@@ -70,9 +70,9 @@
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-int[] GenerateArray(int size, int leftrange, int rightrange)
+double[] GenerateArray(int size, int leftrange, int rightrange)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
     var rand = new Random();
     for (int i = 0; i < array.Length; i++)
     {
@@ -81,15 +81,15 @@ int[] GenerateArray(int size, int leftrange, int rightrange)
     return array;
 }
 
-void PrintArray(int[] array)
+void PrintArray(double[] array)
 {
-    System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+    System.Console.WriteLine("[" + string.Join("| ", array) + "]");
 }
 
-void difference(int[] array)
+void difference(double[] array)
 {
-    int min = array[0];
-    int max = array[0];
+    double min = array[0];
+    double max = array[0];
     for (int i = 0; i < array.Length; i ++)
     {
         if (array[i] > max)
@@ -104,7 +104,7 @@ void difference(int[] array)
     System.Console.WriteLine($"{max - min}");
 }
 
-int[] myArray = GenerateArray(6, 1, 20);
+double[] myArray = GenerateArray(6, 1, 20);
 PrintArray(myArray);
 difference(myArray);
 
