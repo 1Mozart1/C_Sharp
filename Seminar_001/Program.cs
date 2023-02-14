@@ -472,7 +472,8 @@
 
 
 
-// Lesson # 5  ******************************************************************************************************************
+// Lesson # 5  Функции и одномерные массивы  ***************************************************************************************
+
 
 // Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. 
 // Найдите сумму отрицательных и положительных элементов массива.
@@ -728,13 +729,13 @@
 
 
 
-// *************************************************************  функция поиска по индексу  *****************************
+// *************************************************************  функция поиска по индексу  *************
 
 // int[] arr = { 0, 1, 2, 3, 4, 5, 6, };
 // System.Console.WriteLine(Array.IndexOf(arr, 5)); // показывает индекс искомого элемента, если показывает "-1" то такого элемента нет
 
 
-// Задача 35: Задайте одномерный массив из 123 случайных чисел. ****************************************************************
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. ******************************************
 //            Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
 
 
@@ -816,3 +817,186 @@
 // PrintArray(myArray);
 // int[] res = GetResult(myArray);
 // PrintArray(res);
+
+
+
+// Lesson # 6  Одномерные массивы    **********************************************************************************************
+
+
+// Задача 39: Напишите программу, которая перевернёт одномерный массив 
+//            (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// // void ReverseArray(int[] array)                   //
+// // {    
+// //     int temp;                                    //
+// //     for (int i = 0; i < array.Length / 2; i++)   //
+// //     {                                                     // вместо этого Array.Reverse - переворачивает массив    
+// //         temp = array[i];                         //
+// //         array[i] = array[array.Length - i - 1];  //
+// //         array[array.Length - i - 1] = temp;      //
+// //     }
+// // }
+
+// int[] myArray = GenerateArray(6, 1, 10);
+// PrintArray(myArray);
+// Array.Reverse(myArray);
+// PrintArray(myArray);
+
+
+//  Задача 40:  Напишите программу, которая принимает на вход три числа и проверяет, 
+//              может ли существовать треугольник с сторонами такой длины.
+
+// metka:
+// System.Console.Write("Введите числа: ");
+// // Split - по умолчанию разделяет через пробел или Split(";")
+// int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse); // Console.ReadLine().Split() -первый параметр строковы массив
+// // записывает из термина(ввод пользователем) числа в массив;            // int.Parse - второй параметр конвертирует в указанное значение       
+
+// if(array.Length!= 3)
+// {
+//     System.Console.WriteLine("массив введен некоректно");
+//     goto metka;                                             // ОТПРАВЛЯЕТ К МЕТКЕ
+// }
+// else if ((array[0] + array[1]) > array[2] && array[1] + array[2] > array[0] && array[0] + array[2] > array[1])
+// {
+//     System.Console.WriteLine("Такой треугольник существует");
+// }
+// else
+// {
+//     System.Console.WriteLine("Такой треугольник не существует");
+// }
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// System.Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// string st = " ";
+
+// while (n != 0)
+// {
+//     st += n % 2;
+//     n = n / 2;
+// }
+// for (int i = st.Length - 1; i >= 0; i--)
+// {
+//     System.Console.Write(st[i]);
+// }
+// System.Console.WriteLine();
+
+
+// ИЛИ - РЕКУРСИЯ  ***********************
+
+// void GetBinatyView(int number)
+// {
+//     if (number <= 0) return;
+//     GetBinatyView(number / 2);
+//     System.Console.Write(number % 2);
+// }
+
+// System.Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// GetBinatyView(n);
+
+// ИЛИ - КОНВЕРТАЦИЯ В СТРОКУ******************
+
+// System.Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine(Convert.ToString(n, 2));
+
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+//            Если N = 5 -> 0 1 1 2 3
+//            Если N = 3 -> 0 1 1
+//            Если N = 7 -> 0 1 1 2 3 5 8
+
+
+// System.Console.Write("Введите число: ");
+// int F = Convert.ToInt32(Console.ReadLine());
+// int F0 = 0;
+// int F1 = 1;
+
+// System.Console.Write("0 1 ");
+// for (int i = 0; i < F - 2; i++)
+// {
+//     int sum = F0 + F1;
+//     System.Console.Write(sum + " ");
+//     F0 = F1;
+//     F1 = sum;
+// }
+
+
+
+// Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// int[] CopyPaste(int[] array)
+// {
+//     int[] array2 = new int[array.Length];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array2[i] = array[i];
+//     }
+//     return array2;
+// }
+
+// int[] myArray = GenerateArray(6, 1, 10);
+// PrintArray(myArray);
+// int[] CopyArray = CopyPaste(myArray);
+// PrintArray(CopyArray);
+
+// ИЛИ
+
+// int[] GenerateArray(int size, int leftrange, int rightrange)
+// {
+//     int[] array = new int[size];
+//     var rand = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(leftrange, rightrange + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+// }
+
+// int[] myArray = GenerateArray(6, 1, 10);
+// PrintArray(myArray);
+// int[] arrayCopy = myArray[..]; // копия массива одной строкой с выделением памяти  ++++++++++++++++++++++++++
+// PrintArray(arrayCopy);
+
