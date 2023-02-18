@@ -1000,3 +1000,247 @@
 // int[] arrayCopy = myArray[..]; // копия массива одной строкой с выделением памяти  ++++++++++++++++++++++++++
 // PrintArray(arrayCopy);
 
+
+
+// Lesson # 7  Двумерный массивы    **********************************************************************************************
+
+
+// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами. m = 3, n = 4.
+
+// int ReadInt(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[,] GenerateMatrix(int rows, int cols)
+// {
+//     Random rand = new Random();
+//     int[,] matrix = new int[rows, cols];
+
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = rand.Next(0, 11);
+//         }
+//     }
+//     return matrix;
+// }
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             System.Console.Write(matrix[i, j] + "\t"); // \t - это табуляция (tab)
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// int rows = ReadInt("Введите количество строк: ");
+// int cols = ReadInt("Введите количество столбцов: ");
+
+// var myMatrix = GenerateMatrix(rows, cols);
+// PrintMatrix(myMatrix);
+
+
+// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. 
+//            Выведите полученный массив на экран.
+//            rows = 3, cols = 4.
+//            0 1 2 3
+//            1 2 3 4
+//            2 3 4 5
+
+// int ReadInt(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[,] GenerateMatrix(int rows, int cols)
+// {
+//     int[,] matrix = new int[rows, cols];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = i + j;
+//         }
+//     }
+//     return matrix;
+// }
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             System.Console.Write(matrix[i, j] + "\t"); // \t - это табуляция (tab)
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// int rows = ReadInt("Введите количество строк: ");
+// int cols = ReadInt("Введите количество столбцов: ");
+
+// var myMatrix = GenerateMatrix(rows, cols);
+// PrintMatrix(myMatrix);
+
+
+// Задача 49: Задайте двумерный массив. Найдите элементы, у которых оба индекса нечётные, и замените эти элементы на их квадраты.
+// Например, изначально массив      Новый массив будет выглядеть 
+// выглядел вот так:                вот так:
+// 1 4 7 2                          1 4 7 2                     
+// 5 9 2 3                          5 (81) 2 (9)                 
+// 8 4 2 4                          8 4 2 4 
+
+// int ReadInt(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[,] GenerateMatrix(int rows, int cols)
+// {
+//     Random rand = new Random();
+//     int[,] matrix = new int[rows, cols];
+
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = rand.Next(0, 11);
+//         }
+//     }
+//     return matrix;
+// }
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             System.Console.Write(matrix[i, j] + "\t"); // \t - это табуляция (tab)
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// void square(int[,] matrix)
+// {
+//     for (int i = 1; i < matrix.GetLength(0); i += 2)
+//     {
+//         for (int j = 1; j < matrix.GetLength(1); j += 2)
+//         {
+//             if (i % 2 != 0 && j % 2 != 0)
+//             {
+//                 matrix[i, j] = matrix[i, j] * matrix[i, j];
+//             }
+//         }
+//     }
+// }
+
+
+// int rows = ReadInt("Введите количество строк: ");
+// int cols = ReadInt("Введите количество столбцов: ");
+
+// var myMatrix = GenerateMatrix(rows, cols);
+// PrintMatrix(myMatrix);
+// square(myMatrix);
+// System.Console.WriteLine();
+// PrintMatrix(myMatrix);
+
+
+// Задача 51: Задайте двумерный массив. Найти сумму элементов на главной диагонали
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+
+
+// int ReadInt(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[,] GenerateMatrix(int rows, int cols)
+// {
+//     Random rand = new Random();
+//     int[,] matrix = new int[rows, cols];
+
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = rand.Next(0, 11);
+//         }
+//     }
+//     return matrix;
+// }
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             System.Console.Write(matrix[i, j] + "\t"); // \t - это табуляция (tab)
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+// // // int SumElements(int[,] matrix)
+// // // {
+// // //     int sum = 0;
+// // //     for (int i = 0; i < matrix.GetLength(0); i++)
+// // //     {
+// // //         for (int j = 0; j < matrix.GetLength(1); j++)
+// // //         {
+// // //             if (i == j)
+// // //             {
+// // //                 sum += matrix[i, j];
+// // //             }
+// // //         }
+// // //     }
+// // //     return sum;
+// // // }
+// // //      ИЛИ
+
+// // int SumElements(int[,] matrix)
+// // {
+// //     int sum = 0;
+// //     int length = (matrix.GetLength(0) < matrix.GetLength(1)) ? matrix.GetLength(0) : matrix.GetLength(1); // вместо IF ELSE
+// //     // if (matrix.GetLength(0) < matrix.GetLength(1))
+// //     //     length = matrix.GetLength(0);
+// //     // else length = matrix.GetLength(1);
+// //     for (int i = 0; i < length; i++)
+// //     {
+// //         sum += matrix[i, i];
+// //     }
+// //     return sum;
+// // }
+// //      ИЛИ 
+
+// int SumElements(int[,] matrix)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < matrix.GetLength(0) && i < matrix.GetLength(1); i++)
+//     {
+//         sum += matrix[i, i];
+//     }
+//     return sum;
+// }
+
+
+// int rows = ReadInt("Введите количество строк: ");
+// int cols = ReadInt("Введите количество столбцов: ");
+
+// var myMatrix = GenerateMatrix(rows, cols);
+// PrintMatrix(myMatrix);
+// System.Console.WriteLine($"Сумма элементов главной диагонали = {SumElements(myMatrix)}");
+
