@@ -339,7 +339,7 @@
 // 4 -> 10
 // 8 -> 36
 
-// int GetNumber(string text)
+// int Getner(string text)
 // {
 //     System.Console.Write(text);
 //     return Convert.ToInt32(Console.ReadLine());
@@ -356,7 +356,7 @@
 //     return result;
 // }
 
-// int num = GetNumber("Введите число A: ");
+// int num = Getner("Введите число A: ");
 
 // System.Console.WriteLine($"Сумма чисел от 1 до {num} = {GetSumElements(num)}");
 
@@ -367,12 +367,12 @@
 // 89126 -> 5
 
 
-// string? GetNumber(string text)
+// string? Getner(string text)
 // {
 //     System.Console.Write(text);
 //     return Console.ReadLine();
 // }
-// string? num = GetNumber("Введите число A: ");
+// string? num = Getner("Введите число A: ");
 // int result = num!.Length;
 // System.Console.WriteLine(result);
 
@@ -382,7 +382,7 @@
 //           4 -> 24 
 //           5 -> 120
 
-// int GetNumber(string text)
+// int Getner(string text)
 // {
 //     System.Console.Write(text);
 //     return Convert.ToInt32(Console.ReadLine());
@@ -396,7 +396,7 @@
 //     }
 //     return result;
 // }
-// int num = GetNumber("Введите число N: ");
+// int num = Getner("Введите число N: ");
 // System.Console.WriteLine($"Произведение чисел от 1 до {num} = {Multiply(num)}");
 
 
@@ -666,11 +666,11 @@
 //     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
 // }
 
-// bool FindNumber(int[] array, int number)
+// bool Findner(int[] array, int ner)
 // {
 //     for (int i = 0; i < array.Length; i++)
 //     {
-//         if (array[i] == number)
+//         if (array[i] == ner)
 //         {
 //             return true;
 //         }
@@ -679,9 +679,9 @@
 // }
 
 // int[] myArray = GenerateArray(6, -9, 9);
-// int number = 7;
+// int ner = 7;
 // PrintArray(myArray);
-// if(FindNumber(myArray, number))
+// if(Findner(myArray, ner))
 // {
 //     System.Console.WriteLine($"Есть такое число");
 // }
@@ -708,11 +708,11 @@
 //     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
 // }
 
-// void FindNumber(int[] array, int number)
+// void Findner(int[] array, int ner)
 // {
 //     for (int i = 0; i < array.Length; i++)
 //     {
-//         if (array[i] == number)
+//         if (array[i] == ner)
 //         {
 //             System.Console.WriteLine("Есть такое число");
 //             return;
@@ -723,9 +723,9 @@
 // }
 
 // int[] myArray = GenerateArray(6, -9, 9);
-// int number = 7;
+// int ner = 7;
 // PrintArray(myArray);
-// FindNumber(myArray, number);
+// Findner(myArray, ner);
 
 
 
@@ -904,11 +904,11 @@
 
 // ИЛИ - РЕКУРСИЯ  ***********************
 
-// void GetBinatyView(int number)
+// void GetBinatyView(int ner)
 // {
-//     if (number <= 0) return;
-//     GetBinatyView(number / 2);
-//     System.Console.Write(number % 2);
+//     if (ner <= 0) return;
+//     GetBinatyView(ner / 2);
+//     System.Console.Write(ner % 2);
 // }
 
 // System.Console.Write("Введите число: ");
@@ -1581,3 +1581,120 @@
 // Min(myMatrix, out int minI, out int minJ);
 // System.Console.WriteLine();
 // PrintMatrix(MinMatrix(myMatrix, minI, minJ));
+
+
+
+
+
+// Lesson # 9  Рекурсия           ********************************************************************************************
+
+
+// Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+// System.Console.Write("Введите число N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// Print(n);
+
+// void Print(int num)
+// {
+//     if (num < 1) return;
+//     Print(num-1);
+//     System.Console.Write(num + " | ");
+//}
+
+
+// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+//              M = 1; N = 5 -> "1, 2, 3, 4, 5"
+//              M = 4; N = 8 -> "4, 6, 7, 8"
+
+// Metka:
+// int Input(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+
+// void Print(int m, int n)
+// {
+//     if (n < m) return;
+//     Print(m, n - 1);
+//     System.Console.Write(n + " | ");
+// }
+// int m = Input("Введите число M: ");
+// int n = Input("Введите число N: ");
+
+// if (n <= m)     // проверка
+// {
+//     System.Console.WriteLine("Нет промежутка между M и N");
+//     goto Metka;
+// }
+
+// Print(m, n);
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.------------------------
+// 453 -> 12
+// 45 -> 9
+
+
+// int Input(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int Sum(int m, int sum)
+// {
+//     sum += m % 10;
+//     if (m / 10 == 0) return sum;
+
+//     return Sum(m/10, sum);
+// }
+
+// int m = Input("Введите число M: ");
+// System.Console.WriteLine(Sum(m, 0));
+
+//  -----  ИЛИ   -------------
+
+// int Input(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int Sum(int m)
+// {
+//     if (m == 0) return 0;
+
+//     return m % 10 + Sum(m / 10);
+// }
+
+// int m = Input("Введите число M: ");
+// System.Console.WriteLine(Sum(m));
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+int Input(string text)
+{
+    System.Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+
+int Print(int m, int n)
+{
+    if (n != 1) return m * Print(m, n - 1);
+
+    return m;
+
+}
+int m = Input("Введите число M: ");
+int n = Input("Введите число N: ");
+System.Console.WriteLine($"{m} в степени {n} = {Print(m, n)}");
